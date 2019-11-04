@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eZTravel</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+function openLink () {
+    var appWindow = window.open("ubereats://","_blank");
+    setTimeout( function () {if (appWindow) {
+        appWindow.location ="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=zh_TW";
+            }
+            },1000);
+}
+</script>
+</head>
+<body>
+       
+    <div data-role="page">
+
+        <div data-role="header" style="background:-webkit-linear-gradient(rgb(172, 168, 231),rgb(224, 56, 121))" role="banner">
+            <h1 style="color:white;text-align:center;font-size:24px;" class="ui-title" role="heading" aria-level="1">eZTravel</h1>			
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <div class="ui-grid-b" style="height:180px;">
+                <div class="ui-block-a" style="text-align:center;height:100%">
+                    <a href="home.html">
+						<img src="images/1_home.png" >
+						<h5>My home</h5>
+					</a>
+                </div>
+                <div class="ui-block-b" style="text-align:center;height:100%">
+					<a href="find.html">
+						<img src="images/royal_search.png" >
+						<h5>Find Place</h5>
+					</a>
+                </div>
+                <div class="ui-block-c" style="text-align:center;height:100%">
+					<a href="share.html">
+						<img src="images/gps_searching.png" >
+						<h5>Share Location</h5>
+					</a>
+                </div>
+            </div><!-- /grid-b -->
+                
+			<div class="ui-grid-b" style="height:180px;margin-top:30px">
+                <div class="ui-block-a" style="text-align:center;">
+                    <a href="favorites.html">
+						<img src="images/favorite.png">
+						<h5>Favorites</h5>
+					</a>
+                </div>
+                <div class="ui-block-b" style="text-align:center;">
+					<a href="hotel.html">
+						<img src="images/hotel.png">
+						<h5>Hotel</h5>
+					</a>
+                </div>
+                <div class="ui-block-c" style="text-align:center;">
+                    <a href="myPosition.html">
+						<img src="images/navigation.png">
+						<h5>My position</h5>
+					</a>
+                </div>
+            </div><!-- /grid-b -->
+
+			<div class="ui-grid-b" style="height:180px;margin-top:30px">
+                <div class="ui-block-a" style="text-align:center;">
+                    <a href="https://tw.news.yahoo.com/weather/">
+						<img src="images/weather_few_clouds.png" >
+						<h5>Weather</h5>
+					</a>
+                </div>
+                <div class="ui-block-b" style="text-align:center;">
+                    <a onclick="openLink()">
+						<img src="images/uber eat.png">
+						<h5>Food map</h5>
+					</a>
+                </div>
+                <div class="ui-block-c" style="text-align:center;">
+                    <a href="movie.html">
+						<img src="images/film_reel.png">
+						<h5>Movies</h5>
+					</a>
+                </div>
+            </div><!-- /grid-b -->
+        </div>   
+		
+    </div><!-- /content -->
+    
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div><!-- /footer -->
+	
+</body>
+</html>

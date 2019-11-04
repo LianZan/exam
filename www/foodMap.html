@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+       
+    <div data-role="page">
+
+        <div data-role="header" style="background:-webkit-linear-gradient(rgb(172, 168, 231),rgb(224, 56, 121))">
+            <h1 style="font-size:50px;color:white;">ezTravel</h1>
+        </div><!-- /header -->
+		
+		
+		<div>
+		
+			<a href="ubereats://">here</a>
+			
+			<a href="javascript:;" onclick="openClient('ubereats://', 'https://www.ubereats.com', '600');">啟動 ubereat</a>
+		
+		</div>
+		
+		<script>
+			function openClient(scheme_url, download_url, timeout = 600) {
+            var startTime = Date.now();
+            var ifr = document.createElement('iframe');
+        
+            ifr.src = scheme_url;
+            ifr.style.display = 'none';
+            document.body.appendChild(ifr);
+            var t = setTimeout(function() {
+                var endTime = Date.now();
+                if (!startTime || endTime - startTime < timeout + 200) {
+                    //未安裝應用程式執行部分
+                    if (confirm("您未安裝 Line，要前往 Line 官網嗎？")) {
+                        window.open(download_url, "_blank");
+                    }
+                }
+            }, timeout);
+            window.onblur = function() {
+                clearTimeout(t);
+                window.addEventListener("DOMContentLoaded", function() {
+                    document.body.removeChild(ifr);
+                }, false);
+            }
+        }
+</script>
+		
+		        
+        </div><!-- /content -->
+    
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+</body>
+</html>
